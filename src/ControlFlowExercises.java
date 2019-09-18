@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class ControlFlowExercises {
 
     public static void main(String[] args) {
-
+        Scanner input = new Scanner(System.in);
         //while
 
 //        int i = 5;
@@ -26,6 +26,12 @@ public class ControlFlowExercises {
 //
 //        } while (i <= 1000000);
 
+//        long z = 2;
+//
+//        do {
+//            System.out.println(z);
+//            z = z * z;
+//        } while (z <= 1000000);
         //Do While Refactor
 
 //        for(int i = 2; i <= 1000000; i *= Math.pow(i, 1)) {
@@ -103,26 +109,46 @@ public class ControlFlowExercises {
 //            }
 //        } //for
 
-        do {
+        System.out.println("WHat number would you like to go up to?");
+        int answer = Integer.parseInt(input.nextLine());
 
-            long i = 0;
+        for (int counter = 1; counter <= answer; counter++) {
+            System.out.println(String.format("%-2d | %-2d | %-2d", counter,(int) Math.pow(counter, 2), (int) Math.pow(counter, 3)));
+        }
 
-            long iSquared = i;
+//        do {
+//
+//            long i = 0;
+//
+//            long iSquared = i;
+//
+//            iSquared *= Math.pow(i, 1);
+//
+//
+//            long iCubed = i;
+//
+//            iCubed *= Math.pow(i, 2);
+//
+//            System.out.print(i);
+//            System.out.print(iSquared);
+//            System.out.println(iCubed);
+//
+//        } while (userConfirmation == true);
 
-            iSquared *= Math.pow(i, 1);
-
-
-            long iCubed = i;
-
-            iCubed *= Math.pow(i, 2);
-
-            System.out.print(i);
-            System.out.print(iSquared);
-            System.out.println(iCubed);
-
-        } while (userConfirmation == true);
-
-
+//        Scanner userInput = new Scanner(System.in);
+//
+//
+//        System.out.println("Give me a number between 0 - 100");
+//
+//
+//        int userNumber = userInput.nextInt();
+//
+//
+//        if(userNumber <= 59) {
+//            System.out.println("You get an F");
+//        } else if(userNumber >= 66) {
+//            System.out.println("You get a D");
+//        } else if(userNumber <= 79)
 
 
 

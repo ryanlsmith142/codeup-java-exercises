@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsExercises {
     public static void main(String[] args) {
 
@@ -26,12 +28,13 @@ public class MethodsExercises {
 
 //        System.out.println(subtraction(1, 2));
 
-        System.out.println(multiplication(5, 5));
+//        System.out.println(multiplication(5, 5));
 
 //        System.out.println(division(0, 0));
 
 //        System.out.println(modulus(15, 30));
 
+        getInteger(1, 10);
 
 
 
@@ -51,13 +54,22 @@ public class MethodsExercises {
 
 //    Multiplication refactor to not use * operator -- Loop
 
-    public static int multiplication(int num1, int num2) {
-        int total = 0;
-        for(int i = 1; i <= num2; i++) {
-            total += num1;
-        }
-        return total;
-    }
+//    public static int multiplication(int num1, int num2) {
+//        int total = 0;
+//        for(int i = 1; i <= num2; i++) {
+//            total += num1;
+//        }
+//        return total;
+//    }
+
+//    Multiplication refactor2 to use recursion
+
+//    public static int multiplication(int num1, int num2) {
+//        if((num1 == 0) || (num2 == 0)) {
+//            return 0;
+//        } else
+//            return (num1 + multiplication(num1, num2 - 1));
+//    }
 
 //    public static int division(int num1, int num2) {
 //        return num1 / num2;
@@ -66,6 +78,31 @@ public class MethodsExercises {
 //    public static int modulus(int num1, int num2) {
 //        return num1 % num2;
 //    }
+
+
+    public static int getInteger(int min, int max) {
+        System.out.format("Enter a number between %s and %s", min, max);
+
+        Scanner sc = new Scanner(System.in);
+
+        if(sc.hasNextInt()) {
+
+            int userNumberInput = sc.nextInt();
+
+            if((userNumberInput) >= min && (userNumberInput <= max)) {
+                System.out.println("Good Job!");
+            } else {
+
+                getInteger(min, max);
+            }
+
+        } else {
+            System.out.println("That's not a number");
+            getInteger(min,max);
+        }
+
+        return 0;
+    }
 
 
 }

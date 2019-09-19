@@ -34,7 +34,7 @@ public class MethodsExercises {
 
 //        System.out.println(modulus(15, 30));
 
-        getInteger(1, 10);
+        System.out.println(factorialNumber());
 
 
 
@@ -91,17 +91,34 @@ public class MethodsExercises {
 
             if((userNumberInput) >= min && (userNumberInput <= max)) {
                 System.out.println("Good Job!");
+                return userNumberInput;
             } else {
-
-                getInteger(min, max);
+                return getInteger(min, max);
             }
 
         } else {
             System.out.println("That's not a number");
-            getInteger(min,max);
+            return getInteger(min,max);
         }
 
-        return 0;
+    } //getInteger
+
+    public static int factorialNumber() {
+        int numberToFactor = getInteger(1, 10);
+
+        long numberToFactorLong = (long) numberToFactor;
+
+
+        long total = 1;
+
+        for(int i = 1; i <= numberToFactorLong; i++) {
+            total = total * i;
+
+        }
+
+        int totalReturn = (int) total;
+
+        return totalReturn;
     }
 
 

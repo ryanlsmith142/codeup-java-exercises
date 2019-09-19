@@ -1,7 +1,6 @@
 public class MethodsExercises {
     public static void main(String[] args) {
 
-        System.out.println(addition(1,2));
 
 
 //        Basic Arithmetic
@@ -23,6 +22,11 @@ public class MethodsExercises {
 //        Add a modulus method that finds the modulus of two numbers.
 //
 //                Food for thought: What happens if we try to divide by zero? What should happen?
+        System.out.println(addition(1,2));
+
+        System.out.println(subtraction(1, 2));
+
+
     }
 
     public static int addition(int num1, int num2) {
@@ -31,5 +35,9 @@ public class MethodsExercises {
 
     }
 
-    public static int subtraction
+    public static int subtraction(int num1, int num2) {
+        return num1 - num2;
+    }
+
+    public static int multiplication
 }

@@ -90,35 +90,53 @@ public class MethodsExercises {
             int userNumberInput = sc.nextInt();
 
             if((userNumberInput) >= min && (userNumberInput <= max)) {
+
                 System.out.println("Good Job!");
+
                 return userNumberInput;
+
             } else {
+
                 return getInteger(min, max);
+
             }
 
         } else {
+
             System.out.println("That's not a number");
+
             return getInteger(min,max);
         }
 
     } //getInteger
 
-    public static int factorialNumber() {
-        int numberToFactor = getInteger(1, 10);
 
-        long numberToFactorLong = (long) numberToFactor;
+    public static long factorialNumber() {
+        Scanner sc = new Scanner(System.in);
+
+            int numberToFactor = getInteger(1, 10);
+
+            long numberToFactorLong = (long) numberToFactor;
 
 
-        long total = 1;
+            long total = 1;
 
-        for(int i = 1; i <= numberToFactorLong; i++) {
-            total = total * i;
+            for(int i = 1; i <= numberToFactorLong; i++) {
+                total = total * i;
+            }
 
-        }
+            System.out.println("Would you like to continue");
 
-        int totalReturn = (int) total;
+            String userAnswer = sc.nextLine();
 
-        return totalReturn;
+            if(userAnswer.equals("y")) {
+                factorialNumber();
+            } else {
+                System.out.println("Okay, Goodbye!");
+            }
+
+            return total;
+
     }
 
 

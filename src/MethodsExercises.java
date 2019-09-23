@@ -35,7 +35,7 @@ public class MethodsExercises {
 
 //        System.out.println(factorialNumber());
 
-        rollDice();
+        System.out.println(rollDice());
 
     }
 
@@ -140,7 +140,7 @@ public class MethodsExercises {
 
     //DICE ROLLING SIMULATOR
 
-    public static int rollDice() {
+    public static String rollDice() {
         System.out.println("How many sides does this dice have?");
 
         Scanner sc = new Scanner(System.in);
@@ -149,24 +149,24 @@ public class MethodsExercises {
 
         Random rand = new Random();
 
-
-        for(int i = 1; i <= userInput; i++) {
-
-            return rand.nextInt(userInput);
+        for(int i = 1; i <= 2; i++) {
+            System.out.println(rand.nextInt(userInput));
 
         }
 
-//        System.out.println("Would you like to continue?");
-//
-//        String userContinue = sc.nextLine();
-//
-//        if(userContinue == "y") {
-//            rollDice();
-//        } else {
-//            return 0;
-//        }
-        return 0;
+        System.out.println("Would you like to continue?");
+
+        String userContinue = sc.nextLine();
+
+        if(userContinue == "y") {
+            rollDice();
+        }
+
+        return "Thank you have a nice day!";
+
     }
+
+
 
 
  }

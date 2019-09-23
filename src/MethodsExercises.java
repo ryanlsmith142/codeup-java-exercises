@@ -1,9 +1,8 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class MethodsExercises {
     public static void main(String[] args) {
-
-
 
 //        Basic Arithmetic
 //
@@ -34,9 +33,9 @@ public class MethodsExercises {
 
 //        System.out.println(modulus(15, 30));
 
-        System.out.println(factorialNumber());
+//        System.out.println(factorialNumber());
 
-
+        rollDice();
 
     }
 
@@ -80,64 +79,98 @@ public class MethodsExercises {
 //    }
 
 
-    public static int getInteger(int min, int max) {
-        System.out.format("Enter a number between %s and %s", min, max);
+//    public static int getInteger(int min, int max) {
+//        System.out.format("Enter a number between %s and %s", min, max);
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        if(sc.hasNextInt()) {
+//
+//            int userNumberInput = sc.nextInt();
+//
+//            if((userNumberInput) >= min && (userNumberInput <= max)) {
+//
+//                System.out.println("Good Job!");
+//
+//                return userNumberInput;
+//
+//            } else {
+//
+//                return getInteger(min, max);
+//
+//            }
+//
+//        } else {
+//
+//            System.out.println("That's not a number");
+//
+//            return getInteger(min,max);
+//        }
+//
+//    } //getInteger
+//
+//
+//    public static long factorialNumber() {
+//        Scanner sc = new Scanner(System.in);
+//
+//            int numberToFactor = getInteger(1, 10);
+//
+//            long numberToFactorLong = (long) numberToFactor;
+//
+//
+//            long total = 1;
+//
+//            for(int i = 1; i <= numberToFactorLong; i++) {
+//                total = total * i;
+//            }
+//
+//            System.out.println("Would you like to continue");
+//
+//            String userAnswer = sc.nextLine();
+//
+//            if(userAnswer.equals("y")) {
+//                factorialNumber();
+//            } else {
+//                System.out.println("Okay, Goodbye!");
+//            }
+//
+//            return total;
+//
+//    }
+
+    //DICE ROLLING SIMULATOR
+
+    public static int rollDice() {
+        System.out.println("How many sides does this dice have?");
 
         Scanner sc = new Scanner(System.in);
 
-        if(sc.hasNextInt()) {
+        int userInput = sc.nextInt();
 
-            int userNumberInput = sc.nextInt();
+        Random rand = new Random();
 
-            if((userNumberInput) >= min && (userNumberInput <= max)) {
 
-                System.out.println("Good Job!");
+        for(int i = 1; i <= userInput; i++) {
 
-                return userNumberInput;
+            return rand.nextInt(userInput);
 
-            } else {
-
-                return getInteger(min, max);
-
-            }
-
-        } else {
-
-            System.out.println("That's not a number");
-
-            return getInteger(min,max);
         }
 
-    } //getInteger
-
-
-    public static long factorialNumber() {
-        Scanner sc = new Scanner(System.in);
-
-            int numberToFactor = getInteger(1, 10);
-
-            long numberToFactorLong = (long) numberToFactor;
-
-
-            long total = 1;
-
-            for(int i = 1; i <= numberToFactorLong; i++) {
-                total = total * i;
-            }
-
-            System.out.println("Would you like to continue");
-
-            String userAnswer = sc.nextLine();
-
-            if(userAnswer.equals("y")) {
-                factorialNumber();
-            } else {
-                System.out.println("Okay, Goodbye!");
-            }
-
-            return total;
-
+//        System.out.println("Would you like to continue?");
+//
+//        String userContinue = sc.nextLine();
+//
+//        if(userContinue == "y") {
+//            rollDice();
+//        } else {
+//            return 0;
+//        }
+        return 0;
     }
 
 
-}
+ }
+
+
+
+

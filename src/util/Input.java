@@ -37,14 +37,16 @@ public class Input {
         return scanner.nextInt();
     }
 
-    public void getDouble(double min, double max) {
+    public double getDouble(double min, double max) {
         double userNumber = scanner.nextDouble();
 
         if(userNumber >= min && userNumber <= max ) {
-            System.out.println("Good Job!");
+            return userNumber;
         } else {
             getDouble(min, max);
         }
+
+        return userNumber;
     }
 
     public double getDouble() {

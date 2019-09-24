@@ -141,7 +141,7 @@ public class MethodsExercises {
     //DICE ROLLING SIMULATOR
 
     public static String rollDice() {
-        System.out.println("How many sides does this dice have?");
+        System.out.println("How many sides do these dice have?");
 
         Scanner sc = new Scanner(System.in);
 
@@ -150,11 +150,11 @@ public class MethodsExercises {
         Random rand = new Random();
 
         for(int i = 1; i <= 2; i++) {
-            System.out.println(rand.nextInt(userInput));
+            System.out.println(rand.nextInt(userInput - 1));
 
         }
 
-        System.out.println("Would you like to continue?");
+//        System.out.println("Would you like to continue?");
 
         String userContinue = sc.nextLine();
 

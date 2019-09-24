@@ -5,7 +5,7 @@ public class Person {
         return name;
     }
 
-    public void person(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -14,6 +14,8 @@ public class Person {
     }
 
     public static void main(String[] args) {
+        //EXERCISE ONE
+
 //        Person ryan = new Person();
 
 //        ryan.name = "Ryan";
@@ -26,11 +28,41 @@ public class Person {
 
 //        ryan.sayHello();
 
-        Person person1 = new Person("John");
+            //EXERCISE TWO
 
-        Person person2 = new Person("John");
+//        Person person1 = new Person();
+//
+//        person1.name = "John";
+//
+//        Person person2 = new Person();
+//
+//        person2.name = "John";
+//
+//        System.out.println(person1.getName().equals(person2.getName()));
+//        System.out.println(person1 == person2);
 
-        System.out.println(person1.getName().equals(person2.getName()));
-        System.out.println(person1 == person2);
+
+//        Person person1 = new Person();
+//        person1.name = "John";
+//        Person person2 = person1;
+//        System.out.println(person1 == person2);
+
+//        Person person1 = new Person();
+//
+//        person1.name = "John";
+//
+//        Person person2 = person1;
+//
+//        System.out.println(person1.getName());
+//
+//        System.out.println(person2.getName());
+//
+//        person2.setName("Jane");
+//
+//        System.out.println(person1.getName());
+//
+//        System.out.println(person2.getName());
+
+
     }
 }

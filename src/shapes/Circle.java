@@ -4,21 +4,21 @@ public class Circle {
     private double radius;
 
     public Circle(double radius) {
+
         this.radius = radius;
 
     }
 
     public double getArea() {
 
-        double area = 3.14 * (radius * radius);
-
-        return area;
+        return Math.PI * (Math.pow(this.radius, 2));
 
     }
 
     public double getCirumference() {
-        double circumference = 2 * 3.14 * radius;
-        return circumference;
+
+        return 2 * Math.PI * radius;
+
     }
 
 

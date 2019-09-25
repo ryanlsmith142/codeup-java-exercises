@@ -6,28 +6,31 @@ public class CircleApp {
 
     public static void main(String[] args) {
 
+        //INPUT CLASS INSTANCE
+
         Input userInput = new Input();
 
-        System.out.println("Please enter in a number");
 
-        double userDouble = userInput.getDouble();
+        //CIRCLE CLASS INSTANCE
 
-        Circle circleProblem = new Circle(userDouble);
+        System.out.println("Please enter the radius of the circle");
 
-        double circleArea = circleProblem.getArea();
+        Circle radius = new Circle(userInput.getDouble());
 
-        System.out.println("The area is " + circleArea);
 
-        double circleCircumference = circleProblem.getCirumference();
+        System.out.println("The area is " + radius.getArea());
 
-        System.out.println("The circumference is " + circleCircumference);
 
-//        Input isUserContinue = new Input();
+        System.out.println("The circumference is " + radius.getCirumference());
+
 
         System.out.println("Would you like to conitnue?");
-        boolean userContinue = userInput.yesNo();
 
-        System.out.println(userContinue);
+
+        userInput.yesNo();
+
+
+
 
     }
 }

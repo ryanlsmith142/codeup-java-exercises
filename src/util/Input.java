@@ -16,7 +16,19 @@ public class Input {
 
         return this.scanner.nextLine();
 
-    } //getString()
+    } //getString() no parameters
+
+    public String getString(String prompt) {
+
+        if(prompt.isEmpty()) {
+            System.out.println("Type and Press Enter");
+        } else {
+            System.out.println(prompt);
+        }
+
+        return getString();
+
+    } //getString(prompt)
 
     public boolean yesNo() {
 
@@ -32,7 +44,7 @@ public class Input {
 
         System.out.println("Please enter a number between " + min + " and " + max);
 
-        int userNumber = Integer.parseInt(this.scanner.nextLine());
+        int userNumber = Integer.parseInt(getString());
 
         if(userNumber >= min && userNumber <= max ) {
             return userNumber;
@@ -46,15 +58,15 @@ public class Input {
 
         System.out.println("Please enter a number");
 
-        return Integer.parseInt(this.scanner.nextLine());
+        return Integer.parseInt(getString());
 
     } //getInt() no parameters
 
     public double getDouble(double min, double max) {
 
-        System.out.println("Please enter a number between " + min + " and " + max);
+        System.out.println("Please enter a decimal between " + min + " and " + max);
 
-        double userNumber = Double.parseDouble(this.scanner.nextLine());
+        double userNumber = Double.parseDouble(getString());
 
         if(userNumber >= min && userNumber <= max ) {
             return userNumber;
@@ -65,8 +77,8 @@ public class Input {
     } // getDouble(min, max);
 
     public double getDouble() {
-
-        return Double.parseDouble(this.scanner.nextLine());
+        System.out.println("Please enter a decimal: ");
+        return Double.parseDouble(getString());
 
     } //getDouble() no parameters
 

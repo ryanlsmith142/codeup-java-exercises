@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class ServerNameGenerator {
     static String[] adjectives = {"bland", "grey", "sassy", "red bearded", "saucy", "salty", "sweet", "wild", "nice", "caring"};
 
@@ -19,7 +17,7 @@ public class ServerNameGenerator {
 
         String randomNoun = array2[(int) (Math.random() * array1.length - 1)];
 
-        return randomAdjective + " " + randomNoun;
+        return randomAdjective + "-" + randomNoun;
 
     }
 }

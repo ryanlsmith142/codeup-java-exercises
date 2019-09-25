@@ -23,7 +23,7 @@ public class Person {
 
     public static Person[] addPerson(Person[] peopleArray, String newName) {
 
-        Person[] copyOfPersonsArray = Arrays.copyOf(peopleArray, peopleArray.length + 1);
+        Person[] copyOfPersonsArray = Arrays.copyOf(peopleArray, peopleArray.length);
 
         copyOfPersonsArray[copyOfPersonsArray.length - 1] = new Person(newName);
 

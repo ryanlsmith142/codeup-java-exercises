@@ -3,67 +3,76 @@ package util;
 import java.util.Scanner;
 
 public class Input {
+
     private Scanner scanner;
 
     public Input() {
-        scanner = new Scanner(System.in);
-    }
+
+        this.scanner = new Scanner(System.in);
+
+    } //Input()
 
     public String getString() {
-        return scanner.nextLine();
+
+        return this.scanner.nextLine();
+
     } //getString()
 
     public boolean yesNo() {
-        String userInput = scanner.nextLine();
-        if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
-            return true;
-        } else {
-            return false;
-        }
+
+        System.out.println("Enter y/n or yes/no");
+
+        String answer = scanner.nextLine();
+
+        return (answer.equalsIgnoreCase("y")) || (answer.equalsIgnoreCase("yes"));
+
     } // yesNo()
 
-    public void getInt(int min, int max) {
-        int userNumber = scanner.nextInt();
+    public int getInt(int min, int max) {
 
-        if(userNumber >= min && userNumber <= max ) {
-            System.out.println("Good Job!");
-        } else {
-            getInt(min, max);
-        }
+        System.out.println("Please enter a number between " + min + " and " + max);
 
-    }
-
-    public int getInt() {
-        return scanner.nextInt();
-    }
-
-    public double getDouble(double min, double max) {
-        double userNumber = scanner.nextDouble();
+        int userNumber = Integer.parseInt(this.scanner.nextLine());
 
         if(userNumber >= min && userNumber <= max ) {
             return userNumber;
         } else {
-            getDouble(min, max);
+            return getInt(min, max);
         }
 
-        return userNumber;
-    }
+    } //getInt(min, max)
+
+    public int getInt() {
+
+        System.out.println("Please enter a number");
+
+        return Integer.parseInt(this.scanner.nextLine());
+
+    } //getInt() no parameters
+
+    public double getDouble(double min, double max) {
+
+        System.out.println("Please enter a number between " + min + " and " + max);
+
+        double userNumber = Double.parseDouble(this.scanner.nextLine());
+
+        if(userNumber >= min && userNumber <= max ) {
+            return userNumber;
+        } else {
+            return getDouble(min, max);
+        }
+
+    } // getDouble(min, max);
 
     public double getDouble() {
-        return scanner.nextDouble();
-    }
+
+        return Double.parseDouble(this.scanner.nextLine());
+
+    } //getDouble() no parameters
+
     public static void main(String[] args) {
-        Input userInput = new Input();
 
-//        System.out.println(userInput.getString());
-
-//        System.out.println(userInput.yesNo());
-
-//        userInput.getInt(1, 10);
-
-//        System.out.println(userInput.getInt());
-
-//        userInput.getDouble(1.567, 10.56);
+        //TEST INPUT CLASS METHODS HERE
 
     } //main()
 

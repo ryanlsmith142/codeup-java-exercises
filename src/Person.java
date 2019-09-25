@@ -1,8 +1,13 @@
 public class Person {
-    public String name;
+
+    private String name;
+
+    public Person(String name) {
+        setName(name);
+    }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -10,8 +15,10 @@ public class Person {
     }
 
     public void sayHello() {
-        System.out.println("Hello " + name);
+
+        System.out.println("Hello " + this.getName());
     }
+
 
     public static void main(String[] args) {
         //EXERCISE ONE

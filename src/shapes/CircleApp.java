@@ -22,14 +22,10 @@ public class CircleApp {
 
         System.out.println("The circumference is " + circleCircumference);
 
-        System.out.println("Would you like to continue?");
+//        Input isUserContinue = new Input();
 
-
-
-
-        Input isUserContinue = new Input();
-
-        boolean userContinue = isUserContinue.yesNo();
+        System.out.println("Would you like to conitnue?");
+        boolean userContinue = userInput.yesNo();
 
         System.out.println(userContinue);
 

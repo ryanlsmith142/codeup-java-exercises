@@ -8,6 +8,8 @@ public class CircleApp {
 
         Input userInput = new Input();
 
+        System.out.println("Please enter in a number");
+
         double userDouble = userInput.getDouble();
 
         Circle circleProblem = new Circle(userDouble);
@@ -19,6 +21,17 @@ public class CircleApp {
         double circleCircumference = circleProblem.getCirumference();
 
         System.out.println("The circumference is " + circleCircumference);
+
+        System.out.println("Would you like to continue?");
+
+
+
+
+        Input isUserContinue = new Input();
+
+        boolean userContinue = isUserContinue.yesNo();
+
+        System.out.println(userContinue);
 
     }
 }

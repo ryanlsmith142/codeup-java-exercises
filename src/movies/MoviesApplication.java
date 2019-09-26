@@ -26,26 +26,30 @@ public class MoviesApplication {
                     break;
                 case "2":
                     for(Movie movie : MoviesArray.findAll()) {
-                        if(movie.getCategory().equalsIgnoreCase("animated"))
-                        System.out.println(movie.getMovie());
+                        if(movie.getCategory().equalsIgnoreCase("animated")) {
+                            System.out.println(movie.getMovie());
+                        }
                     }
                     break;
                 case "3":
                     for(Movie movie : MoviesArray.findAll()) {
-                        if(movie.getCategory().equalsIgnoreCase("drama"))
+                        if(movie.getCategory().equalsIgnoreCase("drama")) {
                             System.out.println(movie.getMovie());
+                        }
                     }
                     break;
                 case "4":
                     for(Movie movie : MoviesArray.findAll()) {
-                        if(movie.getCategory().equalsIgnoreCase("horror"))
+                        if(movie.getCategory().equalsIgnoreCase("horror")) {
                             System.out.println(movie.getMovie());
+                        }
                     }
                     break;
                 case "5":
                     for(Movie movie : MoviesArray.findAll()) {
-                        if(movie.getCategory().equalsIgnoreCase("scifi"))
+                        if(movie.getCategory().equalsIgnoreCase("scifi")) {
                             System.out.println(movie.getMovie());
+                        }
                     }
                     break;
                 default:

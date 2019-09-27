@@ -2,14 +2,6 @@ package shapes;
 
 public class Rectangle extends Quadrilateral implements Measurable {
 
-//    public void setLength(double length) {
-//        this.length = length;
-//    }
-//
-//    public void setWidth(double width) {
-//        this.width = width;
-//    }
-
     public void setLength(double length) {
         super.length = length;
     }

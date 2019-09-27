@@ -1,15 +1,22 @@
 package animal;
 
 public class Animal {
-    private String age;
+    private int age;
     private String species;
     private boolean isAlive;
 
-    public void setAge(String age) {
+    public Animal(int age, String species, boolean isAlive) {
+        setAge(age);
+        setSpecies(species);
+        setIsAlive(isAlive);
+
+    }
+
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public String getAge() {
+    public int getAge() {
         return this.age;
     }
 

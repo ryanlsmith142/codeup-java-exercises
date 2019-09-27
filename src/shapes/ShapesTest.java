@@ -6,17 +6,16 @@ public class ShapesTest {
 
         double box1Area = box1.getArea();
 
-        System.out.println(box1Area);
+//        System.out.println(box1Area);
 
         double box1perimeter = box1.getPerimeter();
 
-        System.out.println(box1perimeter);
+//        System.out.println(box1perimeter);
 
-        Rectangle box2 = new Square(5);
+        Measurable myShape = new Square(2);
 
-        System.out.println(box2.getArea());
 
-        System.out.println(box2.getPerimeter());
+        System.out.println(myShape.getPerimeter());
 
 
     }

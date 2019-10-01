@@ -104,9 +104,32 @@ import java.util.Scanner;
 
         } //getDouble() no parameters
 
+        public int getBinary() {
+            System.out.println("Please enter a binary number: ");
+
+            try {
+                return Integer.valueOf(getString(), 2);
+
+            } catch(NumberFormatException e) {
+                e.printStackTrace();
+                return getBinary();
+            } //try/catch
+        } //getBinary()
+
+        public int getHex() {
+            System.out.println("Please enter a hex number");
+
+            try {
+                return Integer.valueOf(getString(), 16);
+            } catch(NumberFormatException e) {
+                e.printStackTrace();
+                return getHex();
+            }
+        }
         public static void main(String[] args) {
 
             //TEST INPUT CLASS METHODS HERE
+
 
         } //main()
 

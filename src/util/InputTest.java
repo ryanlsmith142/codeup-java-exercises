@@ -5,7 +5,9 @@ public class InputTest {
             Input userInput = new Input();
 
 
-        System.out.println(userInput.getInt(1, 10));
+        System.out.println(userInput.getHex());
+
+
 
     }
 }

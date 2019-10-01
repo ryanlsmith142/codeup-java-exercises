@@ -58,7 +58,13 @@ import java.util.Scanner;
 
             System.out.println("Please enter a number");
 
-            return Integer.parseInt(getString());
+            try {
+                return Integer.valueOf(getString());
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+                return getInt();
+            }
+
 
         } //getInt() no parameters
 
@@ -77,8 +83,12 @@ import java.util.Scanner;
         } // getDouble(min, max);
 
         public double getDouble() {
-            System.out.println("Please enter a decimal: ");
-            return Double.parseDouble(getString());
+            try {
+                return Double.valueOf(getString());
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+                return getDouble();
+            }
 
         } //getDouble() no parameters
 

@@ -44,11 +44,16 @@ import java.util.Scanner;
 
             System.out.println("Please enter a number between " + min + " and " + max);
 
-            int userNumber = Integer.parseInt(getString());
+            try {
+                int userNumber = Integer.parseInt(getString());
 
-            if(userNumber >= min && userNumber <= max ) {
-                return userNumber;
-            } else {
+                if(userNumber >= min && userNumber <= max ) {
+                    return userNumber;
+                } else {
+                    return getInt(min, max);
+                }
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
                 return getInt(min, max);
             }
 
@@ -72,17 +77,24 @@ import java.util.Scanner;
 
             System.out.println("Please enter a decimal between " + min + " and " + max);
 
-            double userNumber = Double.parseDouble(getString());
+            try {
+                double userNumber = Double.valueOf(getString());
 
-            if(userNumber >= min && userNumber <= max ) {
-                return userNumber;
-            } else {
+                if(userNumber >= min && userNumber <= max ) {
+                    return userNumber;
+                } else {
+                    return getDouble(min, max);
+                }
+            } catch(NumberFormatException e) {
+                e.printStackTrace();
                 return getDouble(min, max);
             }
+
 
         } // getDouble(min, max);
 
         public double getDouble() {
+            System.out.println("Please enter a decimal: ");
             try {
                 return Double.valueOf(getString());
             } catch (NumberFormatException e) {

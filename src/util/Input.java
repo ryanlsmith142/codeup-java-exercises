@@ -2,92 +2,91 @@ package util;
 
 import java.util.Scanner;
 
-public class Input {
+    public class Input {
 
-    private Scanner scanner;
+        private Scanner scanner;
 
-    public Input() {
+        public Input() {
 
-        this.scanner = new Scanner(System.in);
+            this.scanner = new Scanner(System.in);
 
-    } //Input()
+        } //Input()
 
-    public String getString() {
+        public String getString() {
 
-        return this.scanner.nextLine();
+            return this.scanner.nextLine();
 
-    } //getString() no parameters
+        } //getString() no parameters
 
-    public String getString(String prompt) {
+        public String getString(String prompt) {
 
-        if(prompt.isEmpty()) {
-            System.out.println("Type and Press Enter");
-        } else {
-            System.out.println(prompt);
-        }
+            if(prompt.isEmpty()) {
+                System.out.println("Type and Press Enter");
+            } else {
+                System.out.println(prompt);
+            }
 
-        return getString();
+            return getString();
 
-    } //getString(prompt)
+        } //getString(prompt)
 
-    public boolean yesNo() {
+        public boolean yesNo() {
 
-        System.out.println("Enter y/n or yes/no");
+            System.out.println("Enter y/n or yes/no");
 
-        String answer = scanner.nextLine();
+            String answer = scanner.nextLine();
 
-        return (answer.equalsIgnoreCase("y")) || (answer.equalsIgnoreCase("yes"));
+            return (answer.equalsIgnoreCase("y")) || (answer.equalsIgnoreCase("yes"));
 
-    } // yesNo()
+        } // yesNo()
 
-    public int getInt(int min, int max) {
+        public int getInt(int min, int max) {
 
-        System.out.println("Please enter a number between " + min + " and " + max);
+            System.out.println("Please enter a number between " + min + " and " + max);
 
-        int userNumber = Integer.parseInt(getString());
+            int userNumber = Integer.parseInt(getString());
 
-        if(userNumber >= min && userNumber <= max ) {
-            return userNumber;
-        } else {
-            return getInt(min, max);
-        }
+            if(userNumber >= min && userNumber <= max ) {
+                return userNumber;
+            } else {
+                return getInt(min, max);
+            }
 
-    } //getInt(min, max)
+        } //getInt(min, max)
 
-    public int getInt() {
+        public int getInt() {
 
-        System.out.println("Please enter a number");
+            System.out.println("Please enter a number");
 
-        return Integer.parseInt(getString());
+            return Integer.parseInt(getString());
 
-    } //getInt() no parameters
+        } //getInt() no parameters
 
-    public double getDouble(double min, double max) {
+        public double getDouble(double min, double max) {
 
-        System.out.println("Please enter a decimal between " + min + " and " + max);
+            System.out.println("Please enter a decimal between " + min + " and " + max);
 
-        double userNumber = Double.parseDouble(getString());
+            double userNumber = Double.parseDouble(getString());
 
-        if(userNumber >= min && userNumber <= max ) {
-            return userNumber;
-        } else {
-            return getDouble(min, max);
-        }
+            if(userNumber >= min && userNumber <= max ) {
+                return userNumber;
+            } else {
+                return getDouble(min, max);
+            }
 
-    } // getDouble(min, max);
+        } // getDouble(min, max);
 
-    public double getDouble() {
-        System.out.println("Please enter a decimal: ");
-        return Double.parseDouble(getString());
+        public double getDouble() {
+            System.out.println("Please enter a decimal: ");
+            return Double.parseDouble(getString());
 
-    } //getDouble() no parameters
+        } //getDouble() no parameters
 
-    public static void main(String[] args) {
+        public static void main(String[] args) {
 
-        //TEST INPUT CLASS METHODS HERE
+            //TEST INPUT CLASS METHODS HERE
 
-    } //main()
+        } //main()
 
-} //Input Class
-
+    } //Input Class
 
